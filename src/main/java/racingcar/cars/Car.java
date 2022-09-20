@@ -1,4 +1,4 @@
-package cars;
+package racingcar.cars;
 
 import racingcar.Constants;
 import racingcar.RandomNumber;

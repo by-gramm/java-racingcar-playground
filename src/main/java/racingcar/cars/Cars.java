@@ -1,4 +1,4 @@
-package cars;
+package racingcar.cars;
 
 import racingcar.view.ResultView;
 
@@ -17,6 +17,12 @@ public class Cars {
             throw new IllegalArgumentException("자동차명은 중복될 수 없습니다.");
         }
         cars.add(car);
+    }
+
+    public void addCarWithName(String name) {
+        CarName carName = CarName.of(name);
+        Car car = Car.of(carName);
+        addCar(car);
     }
 
     public void play(int playCount) {

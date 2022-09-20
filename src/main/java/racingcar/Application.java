@@ -1,28 +1,31 @@
 package racingcar;
 
-import cars.Car;
-import cars.CarName;
-import cars.Cars;
+import racingcar.cars.Car;
+import racingcar.cars.CarName;
+import racingcar.cars.Cars;
 import racingcar.view.InputView;
 
 import java.io.IOException;
 
 public class Application {
 
+    private static final InputView inputView = new InputView();
+    private static final Cars carList = new Cars();
+
     public static void main(String[] args) throws IOException {
-        InputView inputView = new InputView();
-        Cars carList = new Cars();
-
         String carNames = inputView.getCarNames();
-        String[] names = carNames.split(",");
-
-        for (String name : names) {
-            CarName carName = CarName.of(name);
-            Car car = Car.of(carName);
-            carList.addCar(car);
-        }
+        addCarsWithNames(carNames);
 
         int playCount = inputView.getPlayCount();
         carList.play(playCount);
     }
+
+    private static void addCarsWithNames(String carNames) {
+        String[] names = carNames.split(",");
+
+        for (String name : names) {
+            carList.addCarWithName(name);
+        }
+    }
+
 }
