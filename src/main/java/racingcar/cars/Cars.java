@@ -1,4 +1,4 @@
-package racingcar;
+package racingcar.cars;
 
 import java.util.*;
 
@@ -13,4 +13,6 @@ public class Cars {
         }
         cars.add(car);
     }
+
+
 }

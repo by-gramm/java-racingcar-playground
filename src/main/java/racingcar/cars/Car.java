@@ -1,4 +1,6 @@
-package racingcar;
+package racingcar.cars;
+
+import racingcar.Constants;
 
 import java.util.Objects;
 
@@ -16,6 +18,14 @@ public class Car {
         return new Car(carName);
     }
 
+    public void moveForward() {
+        this.position.moveForward();
+    }
+
+    public CarPosition getPosition() {
+        return this.position;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -28,4 +38,5 @@ public class Car {
     public int hashCode() {
         return Objects.hash(name);
     }
+
 }
