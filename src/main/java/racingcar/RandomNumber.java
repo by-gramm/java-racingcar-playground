@@ -1,5 +1,7 @@
 package racingcar;
 
+import static racingcar.Constants.*;
+
 public class RandomNumber {
 
     private int number;
@@ -14,7 +16,7 @@ public class RandomNumber {
     }
 
     public static RandomNumber of(int number) {
-        if (number < 0 || number > 9) {
+        if (number < MIN_RANDOM_NUMBER || number > MAX_RANDOM_NUMBER) {
             throw new IllegalArgumentException("0 ~ 9 사이의 수만 가능합니다.");
         }
 

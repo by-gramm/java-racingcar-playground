@@ -4,9 +4,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import racingcar.cars.Car;
-import racingcar.cars.CarName;
-import racingcar.cars.CarPosition;
+import cars.Car;
+import cars.CarName;
+import cars.CarPosition;
 
 import static org.junit.jupiter.api.Assertions.*;
 

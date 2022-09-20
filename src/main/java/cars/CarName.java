@@ -1,6 +1,8 @@
-package racingcar.cars;
+package cars;
 
 import java.util.Objects;
+
+import static racingcar.Constants.*;
 
 public class CarName {
 
@@ -11,11 +13,15 @@ public class CarName {
     }
 
     public static CarName of(String carName) {
-        if (carName.length() > 5) {
+        if (carName.length() > MAX_CARNAME_LENGTH) {
             throw new IllegalArgumentException("자동차명은 5자리 이상이어야 합니다.");
         }
 
         return new CarName(carName);
+    }
+
+    public String getCarName() {
+        return carName;
     }
 
     @Override
@@ -29,5 +35,10 @@ public class CarName {
     @Override
     public int hashCode() {
         return Objects.hash(carName);
+    }
+
+    @Override
+    public String toString() {
+        return carName;
     }
 }

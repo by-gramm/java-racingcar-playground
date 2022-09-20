@@ -1,11 +1,10 @@
 package racingcar;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import racingcar.cars.Car;
-import racingcar.cars.CarName;
-import racingcar.cars.Cars;
+import cars.Car;
+import cars.CarName;
+import cars.Cars;
 
 import java.util.List;
 
