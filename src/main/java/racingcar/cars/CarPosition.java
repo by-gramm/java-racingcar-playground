@@ -19,6 +19,14 @@ public class CarPosition {
         return new CarPosition(position);
     }
 
+    public void moveForward() {
+        this.position++;
+    }
+
+    public int getPosition() {
+        return position;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -30,9 +38,5 @@ public class CarPosition {
     @Override
     public int hashCode() {
         return Objects.hash(position);
-    }
-
-    public void moveForward() {
-        this.position++;
     }
 }

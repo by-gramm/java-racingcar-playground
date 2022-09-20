@@ -1,6 +1,7 @@
 package racingcar.cars;
 
 import java.util.*;
+import static java.util.stream.Collectors.*;
 
 public class Cars {
 
@@ -14,5 +15,19 @@ public class Cars {
         cars.add(car);
     }
 
+    public List<Car> getWinners() {
+        int maxPosition = getMaxPosition();
 
+        List<Car> winners = cars.stream()
+                .filter(car -> car.getPosition().getPosition() == maxPosition)
+                .collect(toList());
+
+        return winners;
+    }
+
+    private int getMaxPosition() {
+        return cars.stream()
+                .mapToInt(car -> car.getPosition().getPosition())
+                .max().getAsInt();
+    }
 }
