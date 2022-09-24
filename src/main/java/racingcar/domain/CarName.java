@@ -20,4 +20,7 @@ public class CarName {
         return !name.trim().isEmpty() && name.trim().length() <= 5;
     }
 
+    public String getName() {
+        return name;
+    }
 }
