@@ -45,4 +45,9 @@ public class CarPosition implements Comparable {
 
         return Integer.compare(this.position, carPosition.position);
     }
+
+    @Override
+    public String toString() {
+        return "-".repeat(position);
+    }
 }

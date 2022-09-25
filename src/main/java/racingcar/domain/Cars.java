@@ -23,6 +23,17 @@ public class Cars {
         return new Cars(names);
     }
 
+    public void playRound() {
+        carList.forEach(car -> {
+            RandomNumber randomNumber = RandomNumber.of();
+            car.playRound(randomNumber);
+        });
+    }
+
+    public List<Car> getCars() {
+        return carList;
+    }
+
     private static List<String> toList(String nameString) {
         return Arrays
                 .stream(nameString.split(DEFAULT_SPLITERATOR))

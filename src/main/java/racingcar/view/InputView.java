@@ -19,13 +19,13 @@ public class InputView {
     public Integer setupRound() throws IOException {
         System.out.println("시도할 횟수는 몇 회인가요?");
 
-        String count = reader.readLine();
+        String playCount = reader.readLine();
 
-        if (!PatternChecker.isNumeric(count)) {
+        if (!PatternChecker.isNumeric(playCount)) {
             throw new InputMismatchException("횟수는 숫자만 입력 가능합니다.");
         }
 
-        return Integer.parseInt(reader.readLine());
+        return Integer.parseInt(playCount);
     }
 
 }

@@ -13,7 +13,7 @@ public class CarName {
             throw new IllegalArgumentException("자동차명은 1자 이상 5자 이하여야 합니다.");
         }
 
-        return new CarName(name);
+        return new CarName(name.trim());
     }
 
     private static boolean isValid(String name) {
@@ -22,5 +22,10 @@ public class CarName {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%5s", name);
     }
 }

@@ -22,6 +22,12 @@ public class Car implements Comparable {
         return new Car(carName, position);
     }
 
+    public void playRound(RandomNumber randomNumber) {
+        if (randomNumber.isMoving()) {
+            move();
+        }
+    }
+
     public void move() {
         position = position.moveForward();
     }
@@ -56,5 +62,10 @@ public class Car implements Comparable {
         Car car = (Car) o;
 
         return this.position.compareTo(car.getPosition());
+    }
+
+    @Override
+    public String toString() {
+        return carName + " : " + position;
     }
 }
