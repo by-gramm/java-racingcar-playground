@@ -1,6 +1,7 @@
 package racingcar;
 
 import racingcar.domain.Cars;
+import racingcar.domain.Winner;
 import racingcar.view.InputView;
 import racingcar.view.ResultView;
 
@@ -21,6 +22,9 @@ public class RacingMain {
             carList.playRound();
             resultView.showResult(carList);
         }
+
+        Winner winners = Winner.getResult(carList.getCars());
+        resultView.showWinners(winners);
     }
 
 }

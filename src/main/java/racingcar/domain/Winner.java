@@ -48,4 +48,9 @@ public class Winner {
     public int hashCode() {
         return Objects.hash(winner);
     }
+
+    @Override
+    public String toString() {
+        return winner;
+    }
 }
